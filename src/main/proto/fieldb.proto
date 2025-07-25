@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "com.example.grpc.proto";
+option java_multiple_files = true;
+
+service FieldBService {
+  rpc SaveField(FieldBRequest) returns (FieldBResponse);
+}
+
+message FieldBRequest {
+  int32 age = 1;
+}
+
+message FieldBResponse {
+  bool success = 1;
+}
